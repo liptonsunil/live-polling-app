@@ -13,7 +13,7 @@ export default function Login() {
     const endpoint = isLogin ? '/api/login' : '/api/signup';
     
     try {
-      const res = await axios.post(`http://localhost:8080${endpoint}`, { username, password });
+      const res = await axios.post(`https://polling-backend-c9oo.onrender.com`, { username, password });
       
       if (isLogin) {
         // Save the token and username to the browser

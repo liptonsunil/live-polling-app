@@ -19,7 +19,7 @@ export default function CreatePoll() {
     const creator = localStorage.getItem('username'); // Use actual logged-in user
 
     try {
-      const response = await axios.post('http://localhost:8080/api/polls', {
+      const response = await axios.post('https://polling-backend-c9oo.onrender.com/api/polls', {
         creator: creator,
         question,
         options

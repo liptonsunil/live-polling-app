@@ -21,7 +21,7 @@ export default function LivePoll() {
 
   // 2. Establish the WebSocket connection
   useEffect(() => {
-    const ws = new WebSocket(`ws://localhost:8080/ws/polls/${id}`);
+    const ws = new WebSocket(`wss://[polling-backend-c9oo.onrender.com/ws/polls/${id}`);
     ws.onmessage = (event) => {
       const updatedPoll = JSON.parse(event.data);
       setPoll(updatedPoll);
